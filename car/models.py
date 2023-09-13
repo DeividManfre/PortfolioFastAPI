@@ -12,11 +12,11 @@ class CompleteEnum(Enum):
 class Car(Base):
     __tablename__ = "car"
 
-    id: int = Column(Integer, primary_key=True, index=True)
-    brand: str = Column(String)
-    model: str = Column(String)
-    complete: CompleteEnum = Column(String)
-    year: date = Column(Date)
-    color_id: int = Column(Integer)
-    name_brand_id: int = Column(Integer)
-    license_plate: str = Column(String)
+    id = Column(Integer, primary_key=True, index=True)
+    brand = Column(String)
+    model = Column(String)
+    complete = Column(String)
+    year = Column(Date)
+    color_id = Column(Integer)
+    name_brand_id = Column(Integer)
+    license_plate = Column(String)
