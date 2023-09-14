@@ -1,6 +1,7 @@
 from sqlalchemy.orm import Session
 from .models import Sale
 from .schemas import SaleCreate, SaleUpdate, SaleInDB
+from . import models
 
 def create_sale(db: Session, sale: SaleCreate) -> SaleInDB:
     _sale = Sale(**sale.dict())

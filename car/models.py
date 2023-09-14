@@ -1,9 +1,7 @@
 from sqlalchemy import Column, Integer, String, Date
-from sqlalchemy.ext.declarative import declarative_base
 from enum import Enum
-from datetime import date
+from utils.db import Base
 
-Base = declarative_base()
 
 class CompleteEnum(Enum):
     Sim = 'S'

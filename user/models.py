@@ -1,6 +1,7 @@
 from sqlalchemy import Column, Integer, String
 from utils.db import Base
 
+
 class User(Base):
     __tablename__ = "user"
 
@@ -8,3 +9,4 @@ class User(Base):
     name = Column(String)
     email = Column(String)
     phone = Column(Integer)
+    
