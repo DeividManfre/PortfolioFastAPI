@@ -18,4 +18,4 @@ class SaleResponse(BaseModel):
     car_id: int
 
 class SaleListResponse(BaseModel):
-    items: List[SaleResponse]
+    sales: List[SaleResponse]

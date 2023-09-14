@@ -1,14 +1,13 @@
 from sqlalchemy.orm import Session
 from .models import Sale
 from .schemas import SaleCreate, SaleUpdate, SaleInDB
-from . import models
 
 def create_sale(db: Session, sale: SaleCreate) -> SaleInDB:
     _sale = Sale(**sale.dict())
     db.add(_sale)
     db.commit()
     db.refresh(_sale)
-    return _sale
+    return SaleInDB(**_sale.__dict__)
 
 def get_sale(db: Session, sale_id: int) -> SaleInDB:
     return db.query(Sale).filter(Sale.id == sale_id).first()
